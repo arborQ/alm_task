@@ -4,7 +4,7 @@
   "description": "task for alm recruitment",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "node ./bin/dev.server.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,21 @@
   "bugs": {
     "url": "https://github.com/arborQ/alm_task/issues"
   },
-  "homepage": "https://github.com/arborQ/alm_task#readme"
+  "homepage": "https://github.com/arborQ/alm_task#readme",
+  "devDependencies": {
+    "@types/react": "^16.4.7",
+    "@types/react-dom": "^16.0.6",
+    "awesome-typescript-loader": "^5.2.0",
+    "css-loader": "^1.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "less": "^3.8.0",
+    "less-loader": "^4.1.0",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "style-loader": "^0.21.0",
+    "styled-components": "^3.3.3",
+    "typescript": "^3.0.1",
+    "webpack": "^4.16.3",
+    "webpack-dev-server": "^3.1.5"
+  }
 }
