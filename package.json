@@ -1,0 +1,19 @@
+{
+  "name": "almtask",
+  "version": "1.0.0",
+  "description": "task for alm recruitment",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arborQ/alm_task.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arborQ/alm_task/issues"
+  },
+  "homepage": "https://github.com/arborQ/alm_task#readme"
+}
