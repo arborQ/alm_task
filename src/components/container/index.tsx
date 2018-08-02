@@ -1,8 +1,10 @@
 import * as React from "react";
 import "./container";
 
-export default class Container extends React.Component {
-    public render(): JSX.Element {
-        return <div className="container">container</div>
-    }
+export default function Container(props: React.Props<{}>): JSX.Element {
+    return (
+        <div className="container">
+            {props.children}
+        </div>
+    );
 }
