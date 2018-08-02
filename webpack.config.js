@@ -16,7 +16,7 @@ var config = {
       'react-dom',
       // 'react-redux',
       // 'redux',
-      'styled-components'
+      // 'styled-components'
     ]
   },
   output: {
