@@ -14,16 +14,13 @@ var config = {
     vendor: [
       'react',
       'react-dom',
-      // 'react-redux',
-      // 'redux',
-      // 'styled-components'
     ]
   },
   output: {
     path: outPath,
     publicPath: '/',
-    filename: '[name].bundle.js?_=[chunkhash]',
-    chunkFilename: '[id].chunk.js?_=[chunkhash]'
+    filename: '[name].[chunkhash].bundle.js',
+    chunkFilename: '[id].[chunkhash].chunk.js'
   },
   resolve: {
     extensions: ['.js', '.ts', '.tsx', ".less"],
