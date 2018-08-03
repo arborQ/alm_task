@@ -23,8 +23,33 @@
             &--bold {
                 font-weight: bold;
             }
+        }        
+    }
+
+    &__form {
+        display: flex;
+        justify-content: flex-start;
+        padding: 0.6em 0.7em;
+
+        &--input, &--button {
+            border-radius: 2px;
+            line-height: 4em;
+            font-size: 1.2em;
+        }
+
+        &--input {
+            border-radius: 2px;
+            border: 1px @borderColor solid;
+            padding: 0 2em;
+        }
+
+        &--button {
+            background-color: rgb(25, 151, 25);
+            color: #FFF;
+            border: none;
         }
     }
+
     &__progress {
         @barHeight: 1em;
         border-bottom: 1px solid @borderColor;

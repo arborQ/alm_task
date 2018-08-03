@@ -2,6 +2,7 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import Container from "./components/container";
 import ProgressBar from "./components/progressbar";
+import Donate from "./components/donate";
 import "./styles";
 
 ReactDOM.render(
@@ -16,6 +17,7 @@ ReactDOM.render(
         <span className="donate__container--text--bold">42</span>
         <span> other donors who have already supported this project. Every dollar helps.</span>
       </div>
+      <Donate defaultValue={50} />
     </Container>
   </div>,
   document.getElementById("root"),
