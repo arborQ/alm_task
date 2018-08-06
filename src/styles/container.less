@@ -1,5 +1,5 @@
 @borderColor : #e9e9e9;
-@backgroundColor: #fafafa;
+@whiteColor: #fafafa;
 @higlightColor: #f25a33;
 @infoColor: #35a8d8;
 @fontColor: #828282;
@@ -38,6 +38,30 @@
         &--light {
             border: none;
         }
+        &--dark {
+            background-color: #414141;
+            color: @whiteColor;
+        }
+        &&--rounded {
+            border-radius: 5px;
+        }
+        &&--tooltip {
+            @tooltipSize: 5px;
+
+            position: relative;
+            &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: @tooltipSize @tooltipSize 0 @tooltipSize;
+                border-color: #414141 transparent transparent transparent;
+                right: 8px;
+                bottom: -@tooltipSize;
+            }
+        }
         &--text {
             padding: 0.6em 0.7em;
             text-align: left;
@@ -67,7 +91,6 @@
             cursor: not-allowed;
             opacity: 0.8;
         }
-
         &--success {
             background-color: rgb(25, 151, 25);
             color: #FFF;
@@ -92,7 +115,7 @@
         @barHeight: 1em;
         border-bottom: 1px solid @borderColor;
         min-height: @barHeight;
-        @background-color: @backgroundColor;
+        background-color: @whiteColor;
         &__bar {
             background-color: @higlightColor;
             min-height: @barHeight;

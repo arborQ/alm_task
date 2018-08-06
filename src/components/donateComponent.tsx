@@ -1,4 +1,4 @@
-import { IDonation } from "alm-services";
+import { IDonation, remember } from "alm-services";
 import * as React from "react";
 import Donate from "./donateForm";
 import ProgressBar from "./progressbar";
@@ -11,6 +11,15 @@ export default function donateComponent(props: {
 
     return (
         <div className="donate">
+            <div className="donate__container donate__container--dark donate__container--rounded donate__container--tooltip">
+                <div className="donate__container--text">
+                    {
+                        donate.currentValue < donate.goal
+                            ? `${donate.goal - donate.currentValue}$ still need for this project`
+                            : "The goal has been achieved but we continue to accept contributions."
+                    }
+                </div>
+            </div>
             <div className="donate__container">
                 <ProgressBar value={donate.currentValue} maxValue={donate.goal} />
                 <div className="donate__container--text">
@@ -29,7 +38,10 @@ export default function donateComponent(props: {
             </div>
             <div className="donate__container donate__container--light">
                 <div className="layout layout--vertical layout--margin">
-                    <button type="button" className="donate__button donate__button--default">Save for later</button>
+                    <button type="button" className="donate__button donate__button--default"
+                        onClick={() => {
+                            remember("donate_form", donate);
+                        }}>Save for later</button>
                     <a className="donate__button donate__button--default" href={`mailto:?subject=ok`}>
                         Tell a friend
                         </a>

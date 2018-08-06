@@ -1,3 +1,5 @@
+import { get } from "./storeService";
+
 export interface IDonation {
     currentValue: number;
     daysLeft: number;
@@ -7,11 +9,14 @@ export interface IDonation {
 }
 
 let donateFakeServerState: IDonation = {
-    currentValue: 123,
-    daysLeft: 3,
-    defaultDonation: 50,
-    donors: 42,
-    goal: 500,
+    ...{
+        currentValue: 123,
+        daysLeft: 3,
+        defaultDonation: 50,
+        donors: 42,
+        goal: 500,
+    }
+    , ...(get<IDonation>("donate_form") || {}),
 };
 
 export function loadDonateState(): Promise<IDonation> {
