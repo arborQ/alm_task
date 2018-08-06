@@ -26,7 +26,7 @@ var config = {
     extensions: ['.js', '.ts', '.tsx', ".less"],
     mainFields: ['main'],
     alias: {
-
+      "alm-services": path.resolve(__dirname, "./src/services/index.ts")
     }
   },
   mode: 'development',

@@ -15,6 +15,7 @@
     "outDir": "build",
     "baseUrl": "./",
     "paths": {
+      "alm-services": ["./src/services/index.ts"],
     },
     "lib": [
       "es6",
