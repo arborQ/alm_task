@@ -1,1 +1,7 @@
-# alm_task
+# ALM task
+
+# Install
+
+```js
+npm install
+```

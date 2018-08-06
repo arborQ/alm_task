@@ -3,6 +3,12 @@ import * as React from "react";
 import Donate from "./donateForm";
 import ProgressBar from "./progressbar";
 
+function donateMessageLink(d: IDonation): string {
+    const message = `Only ${d.daysLeft} days left`;
+
+    return `mailto:?subject=${message}&body=${message}`;
+}
+
 export default function donateComponent(props: {
     donate: IDonation,
     onChange: (newState: IDonation) => void,
@@ -11,7 +17,14 @@ export default function donateComponent(props: {
 
     return (
         <div className="donate">
-            <div className="donate__container donate__container--dark donate__container--rounded donate__container--tooltip">
+            <div className={
+                [
+                    "donate__container",
+                    "donate__container--dark",
+                    "donate__container--rounded",
+                    "donate__container--tooltip",
+                ].join(" ")
+            }>
                 <div className="donate__container--text">
                     {
                         donate.currentValue < donate.goal
@@ -42,7 +55,7 @@ export default function donateComponent(props: {
                         onClick={() => {
                             remember("donate_form", donate);
                         }}>Save for later</button>
-                    <a className="donate__button donate__button--default" href={`mailto:?subject=ok`}>
+                    <a className="donate__button donate__button--default" href={donateMessageLink(donate)}>
                         Tell a friend
                         </a>
                 </div>
